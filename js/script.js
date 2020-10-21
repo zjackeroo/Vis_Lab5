@@ -78,8 +78,12 @@ function update(data, type, sort){
     yAxis = d3.axisLeft()
                 .scale(yScale);
     svg.select('.x-axis')
+       .transition()
+       .duration(750)
        .call(xAxis);
     svg.select('.y-axis')
+       .transition()
+       .duration(750)
        .call(yAxis);
     svg.select('.title')
        .text(`${type}`);

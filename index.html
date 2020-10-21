@@ -25,10 +25,18 @@
     
   </head>
   <body>
-    <h2>
-      Coffee House Chains
-    </h2>
     <div class="container">
+      <h2>
+        Coffee House Chains
+      </h2>
+      <div class="graph">
+        <label for="group-by">Group By</label>
+        <select id="group-by">
+          <option value="stores">Stores worldwide</option>
+          <option value="revenue">Revenue in billion U.S. dollars</option>
+        </select>
+        <button id="sort">Sort</button>
+      </div>
       <div class="coffee_plot"></div>
     </div>
   </body>

@@ -62,6 +62,7 @@ function update(data, type, sort){
             .merge(barchart)
             .transition()
             .duration(750)
+            .delay(200)
             .attr('width', 65)
             .attr('height', d=>(height-yScale(d[type])))
             .attr('x', (d,i)=>25+(i*xScale.bandwidth()))
@@ -80,10 +81,12 @@ function update(data, type, sort){
     svg.select('.x-axis')
        .transition()
        .duration(750)
+       .delay(400)
        .call(xAxis);
     svg.select('.y-axis')
        .transition()
        .duration(750)
+       .delay(600)
        .call(yAxis);
     svg.select('.title')
        .text(`${type}`);

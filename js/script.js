@@ -50,12 +50,12 @@ d3.csv('./data/coffee-house-chains.csv', d3.autoType).then(data=>{
        .attr("transform", "translate(20, 0)")
        .call(yAxis);
     
-    yLabel = svg.append("text")
-                .attr('x', margin.left)
-                .attr('y', -10)
-                .attr('alignment-baseline', 'middle')
-                .attr('text-anchor', 'middle')
-                .attr('font-size', 13)
-                .text("Stores");
+    svg.append("text")
+       .attr('x', margin.left-20)
+       .attr('y', -10)
+       .attr('alignment-baseline', 'middle')
+       .attr('text-anchor', 'middle')
+       .attr('font-size', 14)
+       .text("Stores");
 })
 
